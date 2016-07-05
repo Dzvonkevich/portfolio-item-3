@@ -8,8 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="styles/aos.css"/>
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700' rel='stylesheet' type='text/css'>
-	<script   src="https://code.jquery.com/jquery-2.2.0.js"   integrity="sha256-oYqpLeqZe9cetUDV+TFiBZHp3uJ+X4F5eLs4W6uSTSE="   crossorigin="anonymous"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- все скрипты подключаем в футере --> <script   src="https://code.jquery.com/jquery-2.2.0.js"   integrity="sha256-oYqpLeqZe9cetUDV+TFiBZHp3uJ+X4F5eLs4W6uSTSE="   crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 </head>
 <body>
 	<nav id="c-menu--push-left" class="c-menu c-menu--push-left">
@@ -18,7 +18,7 @@
 			<form>
 				<input type="search" name="s" placeholder="search">
 			</form>
-			<img class="c-menu__close close-icon" src="images/close-icon.png">
+			<img class="c-menu__close close-icon" src="images/close-icon.png"> <!-- это нужно обернуть в анкор или кнопку -->
 		</div>
 		<ul class="c-menu__items">
 			<li class="c-menu__item"><a href="#" class="c-menu__link">Furniture</a></li>
@@ -47,7 +47,7 @@
 							<div class="slider-item-info">
 								<h2 class="slider-item-title">Sammen Armchair</h2>
 								<span class="slider-item-price">$399</span>
-								<span class="slider-item-buy">Buy Now</span>	
+								<span class="slider-item-buy">Buy Now</span> <!-- это или внопка или анкор но не спан	-->
 							</div>
 							<div class="slider-item-img-block">
 								<img class="slider-item-img" src="images/product_1.png">
@@ -87,11 +87,14 @@
 				<div class="categories">
 					<div class="categories-full">
 						<ul class="cat-full-list">
-							<li class="cat-full-list-item">Featured</li>
-							<li class="cat-full-list-item">Furniture</li>
+							<li class="cat-full-list-item"><a href="#">Featured</a></li>
+							<!--или-->
+							<li class="cat-full-list-item"><button>Furniture</button></li>
+							<!--но не -->
 							<li class="cat-full-list-item">Decoration</li>
 							<li class="cat-full-list-item">Lighting</li>
 							<li class="cat-full-list-item">Electronics</li>
+							
 						</ul>	
 					</div>
 					<div class="categories-short">
@@ -109,7 +112,14 @@
 					        </ul>
 					    </dd>
 						</dl>
-					</div>				
+					</div><!--зачем писать столько кода если можно сделать выпадающий селект-->
+					<form>
+						<select name="">
+							<option value="Featured">Featured</option>
+							<option value="Featured">Featured</option>
+							<option value="Featured">Featured</option>
+						</select>
+					</form>
 				</div>
 				<div class="grid-list row">
 					<div data-aos="fade-down" class="grid-item col-xs-12 col-sm-6 col-lg-4">
